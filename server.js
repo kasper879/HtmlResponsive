@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var cors = require('cors')
 var homeRouter = require('./Routes/homeRouter'); 
+app.use(express.static('public'))
 //var {mongoose} = require('./MongoDb/connection');
 
 mongoose = process.env.MONGOLAB_URI; 
@@ -28,7 +29,8 @@ app.use(function (req, res, next) {
   next();
 });
 app.get('/', (request, response) => {
-  response.send('hello12')
+  console.log('ramt');
+  app.use(express.static('public'))
 
 })
 app.use('/api/home/', homeRouter);

@@ -9,5 +9,10 @@ var path    = require("path");
 module.exports = router;
 
 router.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname+'/index.html'));
+    console.log("dsd" + __dirname+'/../views')
+    res.sendFile(path.join(__dirname+'/../views/index.html'));
+}); 
+
+router.get('/nav', (req, res) => {
+    res.sendFile(path.join(__dirname+'/../views/navBar.html'));
 }); 
