@@ -2,9 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var cors = require('cors')
-var productRoute = require('./Routes/productRouter');
-var quotationRoute = require('./Routes/quotationRouter'); 
-var salespersonRoute = require('./Routes/salesPersonRouter'); 
+var homeRouter = require('./Routes/homeRouter'); 
 //var {mongoose} = require('./MongoDb/connection');
 
 mongoose = process.env.MONGOLAB_URI; 
@@ -33,10 +31,7 @@ app.get('/', (request, response) => {
   response.send('hello12')
 
 })
-app.use('/api/quotation/', quotationRoute);
-app.use('/api/product/', productRoute);
-app.use('/api/pdf/', pdfRoute);
-app.use('/api/salesperson', salespersonRoute)
+app.use('/api/home/', homeRouter);
 
 app.listen(port, () => {
   console.log(`the server is running ${port} `);
