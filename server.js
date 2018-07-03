@@ -3,7 +3,8 @@ var app = express();
 var bodyParser = require('body-parser');
 var cors = require('cors')
 var homeRouter = require('./Routes/homeRouter'); 
-app.use(express.static('public'))
+var path    = require("path");
+var public = path.join(__dirname, 'public');
 //var {mongoose} = require('./MongoDb/connection');
 
 mongoose = process.env.MONGOLAB_URI; 
@@ -28,12 +29,18 @@ app.use(function (req, res, next) {
   // Pass to next layer of middleware
   next();
 });
-app.get('/', (request, response) => {
-  console.log('ramt');
-  app.use(express.static('public'))
 
-})
-app.use('/api/home/', homeRouter);
+
+
+//setup routes
+app.use('/', homeRouter);
+app.use(express.static(path.join(__dirname, '/public/'))); 
+
+
+//error handling 
+app.get('*', function(req, res){
+  res.send('what???', 404);
+});
 
 app.listen(port, () => {
   console.log(`the server is running ${port} `);

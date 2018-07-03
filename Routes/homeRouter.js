@@ -8,11 +8,15 @@ var path    = require("path");
 
 module.exports = router;
 
-router.get('/home', (req, res) => {
-    console.log("dsd" + __dirname+'/../views')
-    res.sendFile(path.join(__dirname+'/../views/index.html'));
+router.get('/responsiv', (req, res) => {
+   console.log('ramt');
+    res.sendFile(path.join(__dirname+'/../views/responsiv.html'));
 }); 
 
-router.get('/nav', (req, res) => {
-    res.sendFile(path.join(__dirname+'/../views/navBar.html'));
+router.get('/colors', (req, res) => {
+    res.sendFile(path.join(__dirname+'/../views/colors.html'));
+}); 
+
+router.get('/textFormating', (req, res) => {
+    res.sendFile(path.join(__dirname+'/../views/textFormating.html'));
 }); 
