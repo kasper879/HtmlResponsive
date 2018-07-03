@@ -1,32 +1,89 @@
-<!DOCTYPE html>
-<html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
+  <div class="nav-extended  ">
+    <nav class="nav-wrapper indigo">
+        <a href="#" class="brand-logo"> <i class="large material-icons">toys</i></a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-links">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="http://localhost:8080/" class="active">Home</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/responsiv">Responsiv Design</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/colors">Colors</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/textformating">Text Formating</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/buttons">Buttons</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/icons">Icons</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/responsiveGrid">Responsive Grid</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/navbar">Navbar</a>
+          </li>
+          <li>
+            <a href="" class="btn white indigo-text">Login</a>
+          </li>
+        </ul>
+    </nav>
+  </div>
 
-<div class="topnav" id="myTopnav">
-  <a href="http://localhost:8080/" class="active">Home</a>
-  <a href="http://localhost:8080/responsiv">Responsiv Design</a>
-  <a href="http://localhost:8080/colors">Colors</a>
-  <a href="http://localhost:8080/textformating">Text Formating</a>
-  <a href="#about">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+  <ul class="sidenav" id="mobile-links">
+      <li>
+          <a href="http://localhost:8080/" class="active">Home</a>
+        </li>
+        <li>
+          <a href="http://localhost:8080/responsiv">Responsiv Design</a>
+        </li>
+        <li>
+          <a href="http://localhost:8080/colors">Colors</a>
+        </li>
+        <li>
+          <a href="http://localhost:8080/textformating">Text Formating</a>
+        </li>
+        <li>
+          <a href="http://localhost:8080/buttons">Buttons</a>
+        </li>
+        <li>
+          <a href="http://localhost:8080/icons">Icons</a>
+        </li>
+        <li>
+          <a href="http://localhost:8080/responsiveGrid">Responsive Grid</a>
+        </li>
+        <li>
+          <a href="http://localhost:8080/navbar">Navbar</a>
+        </li>
+        <li>
+          <a href="" class="btn white indigo-text">Login</a>
+        </li>
+  </ul>
 
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
-
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+    });
+  </script>
 </body>
-</html>

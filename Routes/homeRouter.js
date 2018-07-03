@@ -20,3 +20,19 @@ router.get('/colors', (req, res) => {
 router.get('/textFormating', (req, res) => {
     res.sendFile(path.join(__dirname+'/../views/textFormating.html'));
 }); 
+
+router.get('/buttons', (req, res) => {
+    res.sendFile(path.join(__dirname+'/../views/buttons.html'));
+}); 
+
+router.get('/icons', (req, res) => {
+    res.sendFile(path.join(__dirname+'/../views/icons.html'));
+}); 
+
+router.get('/responsiveGrid', (req, res) => {
+    res.sendFile(path.join(__dirname+'/../views/responsiveGrid.html'));
+}); 
+
+router.get('/navbar', (req, res) => {
+    res.sendFile(path.join(__dirname+'/../views/navbar.html'));
+}); 
