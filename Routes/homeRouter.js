@@ -36,3 +36,7 @@ router.get('/responsiveGrid', (req, res) => {
 router.get('/navbar', (req, res) => {
     res.sendFile(path.join(__dirname+'/../views/navbar.html'));
 }); 
+
+router.get('/cards', (req, res) => {
+    res.sendFile(path.join(__dirname+'/../views/cards.html'));
+}); 

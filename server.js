@@ -33,8 +33,9 @@ app.use(function (req, res, next) {
 
 
 //setup routes
-app.use('/', homeRouter);
 app.use(express.static(path.join(__dirname, '/public/'))); 
+app.use('/', homeRouter);
+
 
 
 //error handling 
