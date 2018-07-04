@@ -34,6 +34,7 @@ app.use(function (req, res, next) {
 
 //setup routes
 app.use(express.static(path.join(__dirname, '/public/'))); 
+app.use('/img',express.static(path.join(__dirname, '/public/img')));
 app.use('/', homeRouter);
 
 
